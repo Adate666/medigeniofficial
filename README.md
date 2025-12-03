@@ -1,5 +1,12 @@
 **Prerequisites:** Node.js
 
+DASHBOARDS TEST ACCESS :
+
+Rôle	      Email	                  Pass
+Admin       admin@medigeni.com	   admin123
+Médecin	   medecin@medigeni.com	   medecin123
+Patient	   patient@medigeni.com	   patient123
+
 <img width="1024" height="1448" alt="Container" src="https://github.com/user-attachments/assets/b4a48005-fcfe-4eb5-84da-914a6ada3540" />
 
 1. Install dependencies:
