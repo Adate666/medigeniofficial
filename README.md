@@ -1,10 +1,18 @@
 **Prerequisites:** Node.js
 
+
+
 Voici une documentation technique détaillée expliquant le processus de création, l'architecture et la logique derrière Medigeni. Ce document est conçu pour qu'un développeur puisse comprendre comment l'application a été construite de A à Z.
 Documentation Technique : Projet Medigeni
 Architecture, Logique Métier et Intégration IA
 Lien web: https://medigeni.netlify.app/
 Lien repos Flutter : https://github.com/Adate666/medigeni_app
+
+<img width="492" height="757" alt="medi0" src="https://github.com/user-attachments/assets/5004eae6-252b-424b-a08f-437ae06489e1" />
+<img width="499" height="763" alt="medi_admin_dash" src="https://github.com/user-attachments/assets/17582fee-e394-49ef-a20e-493a13815ac1" />
+<img width="498" height="766" alt="medi_dashboard_patient" src="https://github.com/user-attachments/assets/1483e780-51cd-4780-8819-3b4a08f3e0e5" />
+<img width="499" height="761" alt="medi_dashboard_medecin" src="https://github.com/user-attachments/assets/7e53eba9-236b-4c8a-acf1-430c28dca0aa" />
+
 =======
 
 <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; border:1px solid #cfd8dc;">
