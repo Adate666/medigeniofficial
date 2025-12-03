@@ -3,7 +3,8 @@
 Voici une documentation technique détaillée expliquant le processus de création, l'architecture et la logique derrière Medigeni. Ce document est conçu pour qu'un développeur puisse comprendre comment l'application a été construite de A à Z.
 Documentation Technique : Projet Medigeni
 Architecture, Logique Métier et Intégration IA
-Lien : https://medigeni.netlify.app/
+Lien web: https://medigeni.netlify.app/
+Lien repos Flutter : https://github.com/Adate666/medigeni_app
 =======
 
 <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; border:1px solid #cfd8dc;">
