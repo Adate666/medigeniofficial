@@ -3,13 +3,49 @@
 Voici une documentation technique détaillée expliquant le processus de création, l'architecture et la logique derrière Medigeni. Ce document est conçu pour qu'un développeur puisse comprendre comment l'application a été construite de A à Z.
 Documentation Technique : Projet Medigeni
 Architecture, Logique Métier et Intégration IA
+=======
 
-1. Vue d'ensemble du Projet
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; border:1px solid #cfd8dc;">
+  <thead>
+    <tr style="background:#0a7dc2; color:#ffffff; text-align:left;">
+      <th style="padding:12px; border:1px solid #0a7dc2;">Rôle</th>
+      <th style="padding:12px; border:1px solid #0a7dc2;">Email</th>
+      <th style="padding:12px; border:1px solid #0a7dc2;">Mot de passe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#e8f5fe;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a5479; font-weight:600;">Admin</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">admin@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">admin123</td>
+    </tr>
+    <tr style="background:#ffffff;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a7d6c; font-weight:600;">Médecin</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">medecin@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">medecin123</td>
+    </tr>
+    <tr style="background:#e8f5fe;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a5479; font-weight:600;">Patient</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">patient@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">patient123</td>
+    </tr>
+  </tbody>
+</table>
+
+<img width="1024" height="1448" alt="Container" src="https://github.com/user-attachments/assets/b4a48005-fcfe-4eb5-84da-914a6ada3540" />
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
+
+4. Vue d'ensemble du Projet
    Medigeni est une Application Web Progressive (PWA) de santé numérique. Elle combine deux aspects fondamentaux :
    Des outils médicaux assistés par IA (Chatbot, Calculateur IMC, Analyse de symptômes, Suivi menstruel).
    Une plateforme de mise en relation entre patients et médecins (Prise de rendez-vous, Gestion de patientèle).
    L'application est construite en React (TypeScript) avec Tailwind CSS pour le style et Google Gemini pour l'intelligence artificielle.
-2. Architecture Technique (La Structure)
+5. Architecture Technique (La Structure)
    L'application suit une architecture modulaire pour faciliter la maintenance et l'évolution.
    Structure des dossiers :
    components/ : Éléments réutilisables d'interface (Layout, Navbar, Modals, Cartes).
@@ -17,7 +53,7 @@ Architecture, Logique Métier et Intégration IA
    services/ : Logique métier externe (Appels API Gemini, Simulation de Base de données).
    context/ : Gestion de l'état global de l'application (Authentification, Données médicales, Interface).
    types.ts : Définitions TypeScript pour garantir la cohérence des données.
-3. Gestion de l'État Global (Le "Cerveau" de l'App)
+6. Gestion de l'État Global (Le "Cerveau" de l'App)
    Pour éviter de passer des données de parent à enfant indéfiniment ("prop drilling"), nous utilisons l'API Context de React divisée en trois parties :
    AuthContext (Authentification) :
    Gère l'utilisateur connecté (user).
@@ -30,7 +66,7 @@ Architecture, Logique Métier et Intégration IA
    UIContext (Interface Utilisateur) :
    Contrôle l'état global des Modals (Fenêtres contextuelles).
    Permet d'ouvrir la fenêtre de "Connexion/Inscription" depuis n'importe quel bouton de l'application (ex: depuis la page d'accueil ou le dashboard) sans logique complexe dans les composants pages.
-4. Détail des Fonctionnalités Clés
+7. Détail des Fonctionnalités Clés
    A. Système d'Authentification Avancé
    Composant AuthModal : Une fenêtre unique qui gère à la fois la connexion et l'inscription.
    Effet "Flip 3D" : Utilisation de CSS transform: rotateY pour basculer visuellement entre le formulaire de connexion et d'inscription.
@@ -70,7 +106,7 @@ Architecture, Logique Métier et Intégration IA
    Dashboard Admin :
    Vue globale des statistiques (simulées).
    Gestion CRUD (Créer, Lire, Supprimer) des utilisateurs.
-5. Interface & UX (Frontend)
+8. Interface & UX (Frontend)
    Responsive Design : Utilisation des classes utilitaires Tailwind (ex: grid-cols-1 md:grid-cols-3) pour adapter la mise en page du mobile au desktop.
    Dark Mode : Implémentation via une classe dark sur la balise HTML et l'utilisation de classes dark:bg-slate-800 dans les composants.
    Feedback Utilisateur : Des états de chargement (Loader2 animate-spin) sont affichés lors des appels IA ou des simulations réseaux pour ne pas laisser l'utilisateur dans l'attente.
