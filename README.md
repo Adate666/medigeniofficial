@@ -1,11 +1,32 @@
 **Prerequisites:** Node.js
 
-DASHBOARDS TEST ACCESS :
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; border:1px solid #cfd8dc;">
+  <thead>
+    <tr style="background:#0a7dc2; color:#ffffff; text-align:left;">
+      <th style="padding:12px; border:1px solid #0a7dc2;">Rôle</th>
+      <th style="padding:12px; border:1px solid #0a7dc2;">Email</th>
+      <th style="padding:12px; border:1px solid #0a7dc2;">Mot de passe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#e8f5fe;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a5479; font-weight:600;">Admin</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">admin@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">admin123</td>
+    </tr>
+    <tr style="background:#ffffff;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a7d6c; font-weight:600;">Médecin</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">medecin@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">medecin123</td>
+    </tr>
+    <tr style="background:#e8f5fe;">
+      <td style="padding:10px; border:1px solid #cfd8dc; color:#0a5479; font-weight:600;">Patient</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">patient@medigeni.com</td>
+      <td style="padding:10px; border:1px solid #cfd8dc;">patient123</td>
+    </tr>
+  </tbody>
+</table>
 
-Rôle	      Email	                  Pass
-Admin       admin@medigeni.com	   admin123
-Médecin	   medecin@medigeni.com	   medecin123
-Patient	   patient@medigeni.com	   patient123
 
 <img width="1024" height="1448" alt="Container" src="https://github.com/user-attachments/assets/b4a48005-fcfe-4eb5-84da-914a6ada3540" />
 
