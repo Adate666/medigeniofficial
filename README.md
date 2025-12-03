@@ -1,21 +1,15 @@
 **Prerequisites:** Node.js
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Voici une documentation technique détaillée expliquant le processus de création, l'architecture et la logique derrière Medigeni. Ce document est conçu pour qu'un développeur puisse comprendre comment l'application a été construite de A à Z.
+Documentation Technique : Projet Medigeni
+Architecture, Logique Métier et Intégration IA
 
-   Voici une documentation technique détaillée expliquant le processus de création, l'architecture et la logique derrière Medigeni. Ce document est conçu pour qu'un développeur puisse comprendre comment l'application a été construite de A à Z.
-   Documentation Technique : Projet Medigeni
-   Architecture, Logique Métier et Intégration IA
-
-4. Vue d'ensemble du Projet
+1. Vue d'ensemble du Projet
    Medigeni est une Application Web Progressive (PWA) de santé numérique. Elle combine deux aspects fondamentaux :
    Des outils médicaux assistés par IA (Chatbot, Calculateur IMC, Analyse de symptômes, Suivi menstruel).
    Une plateforme de mise en relation entre patients et médecins (Prise de rendez-vous, Gestion de patientèle).
    L'application est construite en React (TypeScript) avec Tailwind CSS pour le style et Google Gemini pour l'intelligence artificielle.
-5. Architecture Technique (La Structure)
+2. Architecture Technique (La Structure)
    L'application suit une architecture modulaire pour faciliter la maintenance et l'évolution.
    Structure des dossiers :
    components/ : Éléments réutilisables d'interface (Layout, Navbar, Modals, Cartes).
@@ -23,7 +17,7 @@
    services/ : Logique métier externe (Appels API Gemini, Simulation de Base de données).
    context/ : Gestion de l'état global de l'application (Authentification, Données médicales, Interface).
    types.ts : Définitions TypeScript pour garantir la cohérence des données.
-6. Gestion de l'État Global (Le "Cerveau" de l'App)
+3. Gestion de l'État Global (Le "Cerveau" de l'App)
    Pour éviter de passer des données de parent à enfant indéfiniment ("prop drilling"), nous utilisons l'API Context de React divisée en trois parties :
    AuthContext (Authentification) :
    Gère l'utilisateur connecté (user).
@@ -36,7 +30,7 @@
    UIContext (Interface Utilisateur) :
    Contrôle l'état global des Modals (Fenêtres contextuelles).
    Permet d'ouvrir la fenêtre de "Connexion/Inscription" depuis n'importe quel bouton de l'application (ex: depuis la page d'accueil ou le dashboard) sans logique complexe dans les composants pages.
-7. Détail des Fonctionnalités Clés
+4. Détail des Fonctionnalités Clés
    A. Système d'Authentification Avancé
    Composant AuthModal : Une fenêtre unique qui gère à la fois la connexion et l'inscription.
    Effet "Flip 3D" : Utilisation de CSS transform: rotateY pour basculer visuellement entre le formulaire de connexion et d'inscription.
@@ -76,7 +70,7 @@
    Dashboard Admin :
    Vue globale des statistiques (simulées).
    Gestion CRUD (Créer, Lire, Supprimer) des utilisateurs.
-8. Interface & UX (Frontend)
+5. Interface & UX (Frontend)
    Responsive Design : Utilisation des classes utilitaires Tailwind (ex: grid-cols-1 md:grid-cols-3) pour adapter la mise en page du mobile au desktop.
    Dark Mode : Implémentation via une classe dark sur la balise HTML et l'utilisation de classes dark:bg-slate-800 dans les composants.
    Feedback Utilisateur : Des états de chargement (Loader2 animate-spin) sont affichés lors des appels IA ou des simulations réseaux pour ne pas laisser l'utilisateur dans l'attente.
